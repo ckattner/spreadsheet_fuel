@@ -9,5 +9,10 @@
 
 require 'acts_as_hashable'
 require 'burner'
+require 'fast_excel'
+require 'roo'
+
+# Require modeling first, which can be used across any job classes.
+require_relative 'spreadsheet_fuel/modeling'
 
 require_relative 'spreadsheet_fuel/library'

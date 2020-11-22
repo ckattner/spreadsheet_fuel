@@ -8,10 +8,6 @@
 #
 
 require 'pry'
-require 'securerandom'
-require 'yaml'
-
-require 'db_helper'
 
 unless ENV['DISABLE_SIMPLECOV'] == 'true'
   require 'simplecov'
@@ -20,17 +16,6 @@ unless ENV['DISABLE_SIMPLECOV'] == 'true'
   SimpleCov.formatter = SimpleCov::Formatter::Console
   SimpleCov.start do
     add_filter %r{\A/spec/}
-  end
-end
-
-RSpec.configure do |config|
-  config.before(:suite) do
-    connect_to_db(:sqlite)
-    load_schema
-  end
-
-  config.before(:each) do
-    clear_data
   end
 end
 

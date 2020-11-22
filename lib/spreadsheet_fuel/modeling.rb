@@ -7,6 +7,4 @@
 # LICENSE file in the root directory of this source tree.
 #
 
-module SpreadsheetFuel
-  VERSION = '0.1.0'
-end
+require_relative 'modeling/sheet_mapping'
