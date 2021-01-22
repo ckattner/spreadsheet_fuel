@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.5'
 
   s.add_dependency('acts_as_hashable', '~>1.2')
-  s.add_dependency('burner', '~>1.0')
+  s.add_dependency('burner', '~>1.7')
   s.add_dependency('fast_excel', '~>0.3')
   s.add_dependency('roo', '~> 2.8')
 

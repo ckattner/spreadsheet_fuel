@@ -103,20 +103,17 @@ describe SpreadsheetFuel::Library::Deserialize::Xlsx do
       pipeline = {
         jobs: [
           {
-            name: 'read',
             type: 'b/io/read',
             path: File.join('spec', 'fixtures', 'patients_and_notes.xlsx') # change as necessary
           },
           {
-            name: 'parse',
             type: 'spreadsheet_fuel/deserialize/xlsx',
             sheet_mappings: [
               { sheet: 'Patients', register: 'patients' },
               { sheet: 'Notes',    register: 'notes' }
             ]
           },
-        ],
-        steps: %w[read parse]
+        ]
       }
 
       payload = Burner::Payload.new

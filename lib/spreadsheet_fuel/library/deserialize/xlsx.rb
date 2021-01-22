@@ -22,7 +22,7 @@ module SpreadsheetFuel
       class Xlsx < Burner::JobWithRegister
         attr_reader :sheet_mappings
 
-        def initialize(name:, register: Burner::DEFAULT_REGISTER, sheet_mappings: nil)
+        def initialize(name: '', register: Burner::DEFAULT_REGISTER, sheet_mappings: nil)
           super(name: name, register: register)
 
           @sheet_mappings = Modeling::SheetMapping.array(sheet_mappings)
